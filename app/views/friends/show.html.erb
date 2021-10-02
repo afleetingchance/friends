@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+  <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <span class="visually-hidden">Loading...</span>
+</div>
+  <div class="card-body">
+    <div style="text-align: center;">
+      <div class="spinner-border text-danger" role="status"></div>
+    </div>
+    <h5 class="card-title"><%= @friend.first_name %> <%= @friend.last_name %></h5>
+    <p class="card-text"><%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %></p>
+    <br>
+    <%= link_to 'Edit', edit_friend_path(@friend), class: "btn btn-secondary" %>
+    <%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' },
+            class: "btn btn-danger" %>
+    <%= link_to 'Back', friends_path, class: "btn btn-dark" %>
+  </div>
+</div>
+
+<!-- <p id="notice"><%= notice %></p> -->
